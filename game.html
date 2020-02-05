@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>POLO (but not really)</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+  <body onLoad="init()">
+	   <div id="header" class="jumbotron text-center">
+		    <h2 id='headerMainText'>POLO</h2>
+        <h3 id='headerSubText'>(but not really)</h3>
+	   </div>
+
+     <div class="container" id='menu'>
+  		<div class="row">
+  			<div class="col-sm-2 column">
+  			</div>
+        <div class="col-sm-4 column">
+          <form>
+            <span class="playerName">Player 1</span><br>
+            <input id="player1Name" class="textBox" type="text" name="player1Name" value="Red"> <br><br>
+            <span class="playerName">Player 2</span><br>
+            <input id="player2Name" class="textBox" type="text" name="player2Name" value="Yellow">
+          </form>
+        </div>
+  			<div class="col-sm-4 column">
+  				<!-- Trigger the modal with a button -->
+  				<br>
+  				<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#instructions">Instructions</button>
+  				<br><br>
+  				<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#credits">Credits</button>
+
+  				<!-- Modal -->
+  				<div id="instructions" class="modal fade" role="dialog">
+  					<div class="modal-dialog">
+
+  						<!-- Modal content-->
+  						<div class="modal-content">
+  							<div class="modal-header">
+  								<button type="button" class="close" data-dismiss="modal">&times;</button>
+  								<h4 class="modal-title">Instructions</h4>
+  							</div>
+  							<div class="modal-body text-left">
+  								<h3>Objective</h4>
+                  <p>This is a two player game where you collect your ball and throw it at your opponent. Hit them before they hit you, and you get a point. First to 5 wins!</p>
+                  <h3>Controls</h4>
+                  <h4>Player 1</h4>
+                  <p>A: Move left <br>
+                    D: Move right <br>
+                    W: Jump (when standing on something) or use jetpack <br>
+                    S: Look down <br>
+                    Space: Throw ball
+                  </p><br>
+                  <h4>Player 2</h4>
+                  <p>A: Move left <br>
+                    D: Move right <br>
+                    W: Jump (when standing on something) or use jetpack <br>
+                    S: Look down <br>
+                    Space: Throw ball
+                  </p>
+  							</div>
+  							<div class="modal-footer">
+  								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+
+  				<div id="credits" class="modal fade" role="dialog">
+  					<div class="modal-dialog">
+
+  						<!-- Modal content-->
+  						<div class="modal-content">
+  							<div class="modal-header">
+  								<button type="button" class="close" data-dismiss="modal">&times;</button>
+  								<h4 class="modal-title">Credits</h4>
+  							</div>
+  							<div class="modal-body">
+  								<p>Horse image: <a href="http://opengameart.org/content/lpc-horses"> Source </a> <br>
+                  Ball image: From Ms. Wear's key event assignment <br>
+                  Everything else: Gus Tahara-Edmonds</p>
+  							</div>
+  							<div class="modal-footer">
+  								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  			<div class="col-sm-2 column">
+  			</div>
+  		</div>
+
+  		<br><br>
+
+  		<div class="row">
+  			<div class="col-sm-5 column">
+  			</div>
+  			<div class="col-sm-2 column">
+  				<button type="button" id="play2" class="btn btn-danger" onclick="startGame()">PLAY GAME</button>
+  			</div>
+  			<div class="col-sm-5 column">
+  			</div>
+  		</div>
+
+      <br><br>
+  	</div>
+
+    <div id="back" class='hidden'>
+  		<button id='back' type="button" class="btn" onclick="backToMenu()">Back</button>
+  	</div>
+
+    <div id="score" class='hidden'>
+    <div id="player1Score">Red</div>
+    <div id="player2Score">Yellow</div>
+    <div id="actualScore">0-0</div>
+    </div>
+
+  	<div id="container" class='hidden'>
+  		<div id="winText" class='shown'></div>
+  	  <br><br>
+    </div>
+
+    <div id="endGameScreen" class="hidden">
+    </div>
+  </body>
+</html>

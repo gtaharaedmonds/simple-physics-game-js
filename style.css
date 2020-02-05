@@ -1,0 +1,124 @@
+body {
+	background-color:#2A363B;
+}
+
+.jumbotron {
+	background-color:#99B898;
+}
+
+#headerMainText {
+	color:#2A363B;
+	font-size:52pt;
+  font-weight:bold;
+}
+
+#headerSubText {
+	color:#2A363B;
+	font-size:24pt;
+  font-style: italic;
+}
+
+#menu {
+	text-align:center;
+}
+
+.playerName {
+	color:white;
+	font-size:18pt;
+}
+
+.shown {
+	display:block;
+}
+
+.hidden {
+	display:none;
+}
+
+#container {
+	position:fixed;
+
+	width:1000px;
+	height:600px;
+
+	left:0px;
+	right:0px;
+	margin-left:auto;
+	margin-right:auto;
+
+	background-color:#99B898;
+}
+
+#back {
+	position:absolute;
+	z-index:1000;
+	top:10px;
+	left:15px;
+	width:80px;
+	text-align:center;
+}
+
+#score {
+	position:relative;
+	margin-top:20px;
+	margin-bottom:5px;
+	width:1000px;
+	margin-left:auto;
+	margin-right:auto;
+	font-size:20px;
+	height:40px;
+	color:white;
+}
+
+#player1Score {
+	position:absolute;
+	left:0px;
+	margin:3px;
+}
+
+#player2Score {
+	position:absolute;
+	right:0px;
+	margin:3px;
+}
+
+#actualScore {
+	position:absolute;
+	text-align:center;
+	width:100%;
+}
+
+#winText {
+	text-align:center;
+	font-size:68pt;
+	color:#2A363B;
+}
+
+.obstacle {
+	position:absolute;
+	background-color:#E84A5F;
+}
+
+.danger {
+	position:absolute;
+	background-color:red;
+}
+
+.player {
+	position:absolute;
+	width:64px;
+	height:62px;
+}
+
+#endGameScreen {
+	position:fixed;
+	padding-top:300px;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-color:#E84A5F;
+	text-align:center;
+	color:white;
+	font-size:72pt;
+}
